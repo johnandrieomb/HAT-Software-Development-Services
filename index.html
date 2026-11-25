@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HAT Software Development Services helps businesses grow through innovative software solutions, modern website development, and reliable technology services.">
+    <title>HAT Software Development Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Icon sprite: icons are defined once here and reused with <use href="#i-name"> -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-web" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <path d="M3 9h18" fill="none" stroke="currentColor" stroke-width="1.8" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="i-mobile" viewBox="0 0 24 24">
+            <rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <path d="M11 18.5h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </symbol>
+        <symbol id="i-support" viewBox="0 0 24 24">
+            <path d="M4 13v-1a8 8 0 0116 0v1" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" />
+            <rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+        </symbol>
+        <symbol id="i-cctv" viewBox="0 0 24 24">
+            <rect x="2" y="7" width="14" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <path d="M16 10l6-3v8l-6-3M8 15v5M5 20h6" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+
+        <!-- Accounting: calculator + coin -->
+        <symbol id="i-accounting" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2.5" width="11" height="15" rx="1.8" />
+                <rect x="6.5" y="5" width="6" height="3" />
+                <path d="M7 11h.01M9.5 11h.01M12 11h.01M7 13.5h.01M9.5 13.5h.01M12 13.5h.01" />
+                <ellipse cx="17.5" cy="17" rx="4" ry="1.8" />
+                <path d="M13.5 17v2.6c0 1 1.8 1.8 4 1.8s4-.8 4-1.8V17" />
+            </g>
+        </symbol>
+        <!-- Web / application development: monitor with code -->
+        <symbol id="i-webapp" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="3.5" width="19" height="13" rx="1.8" />
+                <path d="M2.5 7.5h19M9 20.5h6M12 16.5v4" />
+                <path d="M10 10.2l-2 2 2 2M14 10.2l2 2-2 2" />
+            </g>
+        </symbol>
+        <!-- Financial & trading: chart board -->
+        <symbol id="i-trading" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="3" width="19" height="14" rx="1.8" />
+                <path d="M12 17v3.5M8.5 20.5h7" />
+                <path d="M6 13.5l4-3.5 3 2 5-5M15.5 7h3v3" />
+                <path d="M6 15.2v.01M10 15.2v.01" />
+            </g>
+        </symbol>
+        <!-- Client / server applications: server rack -->
+        <symbol id="i-server" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.5" y="2.5" width="17" height="5" rx="1.5" />
+                <rect x="3.5" y="9.5" width="17" height="5" rx="1.5" />
+                <path d="M6.5 5h.01M6.5 12h.01M10 5h7M10 12h7" />
+                <path d="M12 14.5v3M5 20.5h14M12 17.5v3M5 20.5v-1.5M19 20.5v-1.5" />
+            </g>
+        </symbol>
+        <!-- Enterprise integration: building with connections -->
+        <symbol id="i-enterprise" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="2.5" width="10" height="14" rx="1.2" />
+                <path d="M10 6h.01M14 6h.01M10 9.5h.01M14 9.5h.01" />
+                <path d="M11 16.5v-2h2v2" />
+                <path d="M12 16.5v3M12 19.5H6.5M12 19.5h5.5" />
+                <circle cx="5" cy="19.5" r="1.5" />
+                <circle cx="19" cy="19.5" r="1.5" />
+            </g>
+        </symbol>
+        <!-- Values icons -->
+        <symbol id="i-shield" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
+                <path d="M9 12l2 2 4-4" />
+            </g>
+        </symbol>
+        <symbol id="i-custom" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h8M18 7h2M4 17h2M12 17h8" />
+                <circle cx="15" cy="7" r="2.5" />
+                <circle cx="9" cy="17" r="2.5" />
+            </g>
+        </symbol>
+    </svg>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo"><img src='images/logo-mark.png' alt="HAT logo"> HAT <span>Software
+                    Development
+                    Services</span></a>
+            <button id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+            <div id="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Our Projects</a>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="home">
+            <div class="wrap">
+                <div>
+                    <h1>Your Ideas. Our Technology. Limitless Possibilities.</h1>
+                    <p>We deliver innovative, reliable, and tailored technology solutions that help businesses simplify
+                        operations, overcome challenges, and achieve their goals in a connected world.</p>
+                    <div class="btns">
+                        <a href="#services" class="btn">Explore Our Services</a>
+                        <a href="#contact" class="btn outline">Contact Us</a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat"><strong>25+ Years</strong><span>Combined Experience</span></div>
+                        <div class="stat"><strong>30+ </strong><span>Project Completed</span></div>
+                        <div class="stat"><strong>Tailored</strong><span>Solutions for Every Client</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section id="about">
+            <div class="wrap">
+                <div class="about-split">
+                    <!-- Left: picture area with badge -->
+                    <div class="about-visual">
+                        <div class="about-badge"><small>OVER</small><strong>25 Years</strong></div>
+                        <!-- To use a real photo: replace the next line with <img src="images/about-main.jpg" alt="HAT team at work"> -->
+                        <img class="about-main" src="images/ctomis-login.jpg" alt="CTOMIS login screen">
+                        <img class="about-small" src="images/about-phone.png" alt="HAT mobile app">
+                    </div>
+
+                    <!-- Right: text -->
+                    <div class="about-text">
+                        <span class="eyebrow">About Us</span>
+                        <h2>Built on 25 years of combined experience</h2>
+                        <p class="muted">HAT Software Development Services was founded on January 2018, since then we
+                            have helped businesses and government offices managed their day-to-day operations by
+                            developing customized business software application tailored to their operation's specific
+                            needs.
+                        </p>
+                        <p> Our highly experienced information technology professionals have 25 years of software and
+                            systems development experience and have provided our clients with a full range of services.
+                            These includes consulting services in the field of business software integration, business
+                            operation optimization, and IT infrastructure design and security management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== OUR MISSION ========== -->
+        <section id="mission">
+            <div class="wrap">
+                <div class="mission-split">
+                    <div class="mission-text">
+                        <span class="eyebrow">Our Purpose</span>
+                        <h2>Our mission.</h2>
+                        <p>To provide highest quality services and solutions
+                            to our clients and a productive and innovative environment for our employees to excel in the
+                            world of Information Technology.</p>
+                    </div>
+                    <div class="mission-visual">
+                        <img src="images/mission-art.png" alt="Abstract red and black network ring">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== OUR VALUES ========== -->
+        <section id="values">
+            <div class="wrap">
+                <div class="values-head">
+                    <span class="eyebrow">Our Values</span>
+                    <h2>HAT Software Values</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-shield" />
+                            </svg></span>
+                        <h3>Emphasis on Security</h3>
+                        <p>As systems become more complex and serve greater numbers of more mobile users among an
+                            organization's vendors, customers, employees and others, effective security becomes an
+                            escalating challenge. We bring an unparalleled expertise in secure IT networking to the
+                            service of your enterprise, combining proven methodologies and innovative technologies to
+                            match your needs exactly.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-custom" />
+                            </svg></span>
+                        <h3>Custom Solutions based on Individual Requirement</h3>
+                        <p>HAT Software creates a solution which is optimized to your requirements; Custom by default.
+                            Contrast this with one size fits all bundles sometimes promoted by companies that rely
+                            mainly
+                            on product sales. Because we are vendor-independent, we can select the best-fit solution to
+                            minimize your Total Cost of Ownership, and maximize your Quality of Service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES ========== -->
+        <section class="gray" id="services">
+            <div class="wrap center">
+                <h2>Our Services</h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-webapp" />
+                            </svg></span>
+                        <h3>Website and Application Development</h3>
+                        <p>Transform your ideas into functional web-based applications designed to meet your business
+                            needs.</p>
+                        <a class="learn" href="services/service-website-development.html">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-accounting" />
+                            </svg></span>
+                        <h3>Integrated Accounting System (IAS)</h3>
+                        <p>Simplify financial management with integrated accounting solutions designed to organize and
+                            streamline business transactions.</p>
+                        <a class="learn" href="services/service-integrated-accounting-system.html">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-trading" />
+                            </svg></span>
+                        <h3>Financial & Trading Systems</h3>
+                        <p>Manage financial activities and trading operations through reliable and organized system
+                            solutions.</p>
+                        <a class="learn" href="services/service-financial-trading-systems.html">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-server" />
+                            </svg></span>
+                        <h3>Client/Server Applications</h3>
+                        <p>Connect users, systems, and business data through efficient client/server application
+                            solutions.</p>
+                        <a class="learn" href="services/service-client-server-applications.html">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <span class="icon-badge"><svg class="icon" aria-hidden="true">
+                                <use href="#i-enterprise" />
+                            </svg></span>
+                        <h3>Enterprise Application Integration</h3>
+                        <p>Bring your business systems together for smoother communication, better coordination, and
+                            improved workflows.</p>
+                        <a class="learn" href="services/service-enterprise-application-integration.html">Learn More</a>
+                    </div>
+                </div>
+        </section>
+
+        <!-- ========== WHY CHOOSE US ========== -->
+        <section>
+            <div class="wrap center">
+                <h2>Why Choose Us?</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Customer-Focused Solutions</h3>
+                        <p class="muted">We start with your goals.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Innovative Technology</h3>
+                        <p class="muted">Modern tools, current practices.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Quality-Driven Development</h3>
+                        <p class="muted">Clean code and careful testing.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Reliable Technical Support</h3>
+                        <p class="muted">Help when you need it.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Scalable Software Solutions</h3>
+                        <p class="muted">Built to grow with you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section class="gray" id="projects">
+            <div class="wrap center">
+                <h2>Featured Projects</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="shot"><img src="images/ctomis-login.jpg" alt="CTOMIS login screen" loading="eager">
+                        </div>
+                        <h3>City Treasurers Office, Government of Himamaylan City</h3>
+                        <p class="muted">An integrated City Treasurer's Office Management Information System (CTOMIS)
+                            designed to streamline business permit processing, licensing, and revenue collection for
+                            Himamaylan City.</p>
+                        <button class="btn outline demo"
+                            data-title="City Treasurers Office, Government of Himamaylan City"
+                            data-kicker="DEPLOYED SYSTEM · GOVERNMENT CLIENT "
+                            data-sub="Government System · Business Permit and Licensing · Revenue Collection"
+                            data-overview="HAT Software Development Services developed the City Treasurer's Office Management Information System (CTOMIS) to support the city's Business Permits and Licensing Office (BPLO), streamline permit and licensing processes, and improve revenue collection operations."
+                            data-scope="Government Office Management System"
+                            data-features="Business Permit and Licensing Management|Revenue Collection Monitoring|Records Management|User Access and Authentication|Report Generation"
+                            data-status="Deployed / Operational" data-images="images/ctomis-login.jpg">View
+                            Project</button>
+                    </div>
+                    <div class="card">
+                        <div class="shot"><img src="images/aidfi-login.jpg" alt="AIDFI login screen" loading="eager">
+                        </div>
+                        <h3>Alternative Indigenous Development Foundation, Inc.(AIDFI)</h3>
+                        <p class="muted">We provided AIDFI with innovative digital solutions, including a Web Monitoring
+                            System, Integrated Accounting System, and Ram-Pump Application, supporting efficient
+                            operations and project management.</p>
+                        <button class="btn outline demo"
+                            data-title="Alternative Indigenous Development Foundation, Inc.(AIDFI)"
+                            data-kicker="DEPLOYED SYSTEM · PRIVATE SECTOR CLIENT"
+                            data-sub="Web-Based Systems · Business Solutions · Application Development" data-overview="HAT Software Development Services provided AIDFI with integrated technology
+                            solutions, including a Web Monitoring System, Integrated Accounting System, and Ram-Pump
+                            Application, supporting its operational and monitoring needs."
+                            data-features="Web Monitoring System|Integrated Accounting System|Ram-Pump Application"
+                            data-scope="Web-Based Systems · Application Development" data-status="Active / Operational"
+                            data-images="images/aidfi-login.jpg,images/ramp-system.jpg">View
+                            Project</button>
+                    </div>
+                    <div class="card">
+                        <div class="shot"><img src="images/confidential.png" alt="Accounting login screen"
+                                loading="eager"></div>
+                        <h3>Atienza & Miller Cruz Accounting Firm</h3>
+                        <p class="muted">We provide Atienza & Miller Cruz the integrated accounting system that
+                            facilitate all their
+                            client transaction and financial reports. </p>
+                        <button class="btn outline demo" data-title="Atienza & Miller Cruz Accounting Firm"
+                            data-kicker="DEPLOYED SYSTEM · PRIVATE SECTOR CLIENT"
+                            data-sub="Accounting System · Financial Management Solution"
+                            data-overview="HAT Software Development Services developed an Integrated Accounting System for Atienza & Miller Cruz Accounting Firm to streamline client transactions, organize financial records, and facilitate the preparation and management of financial reports."
+                            data-features="Client Transaction Management|Financial Records Management|Financial Report Generation|Accounting Data Management|Bookkeeping Support"
+                            data-scope="Integrated Accounting and Financial Management System"
+                            data-status="Active / Operational" data-images="images/confidential.png">View
+                            Project</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section id="contact">
+            <div class="wrap">
+                <h2 class="center">Contact Us</h2>
+                <div class="contact">
+
+                    <!-- Placeholders: replace with your real details -->
+                    <div>
+                        <p><strong>Email:</strong><br>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=redhatsysdevelop@gmail.com&su=Inquiry%20from%20HAT%20Website&body=Hello%20HAT%20Software%2C%0A%0AI%20would%20like%20to%20ask%20about..."
+                                target="_blank" rel="noopener">redhatsysdevelop@gmail.com</a>
+                        </p>
+                        <p><strong>Phone:</strong><br>458-7391</p>
+                        <p><strong>Office Address:</strong><br>Brgy. Cabug, Bacolod City, Negros Occidental 6100,
+                            Philippines</p>
+                        <a href="https://www.facebook.com/hatsoftwaredeveloper" target="_blank"
+                            rel="noopener">www.facebook.com/hatsoftwaredeveloper</a>
+                    </div>
+
+                    <form id="form" novalidate>
+                        <label for="name">Full Name</label>
+                        <input id="name" type="text" placeholder="Your full name">
+                        <p class="err"></p>
+
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" placeholder="you@example.com">
+                        <p class="err"></p>
+
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="What is this about?">
+                        <p class="err"></p>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+                        <p class="err"></p>
+
+                        <button type="submit" class="btn">Send Message</button>
+                        <p id="status" role="status"></p>
+                        <p class="note">This contact section is under maintenance</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <h4>HAT Software Development Services</h4>
+                    <p>Reliable, innovative, and efficient software solutions.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Our Projects</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Website and Application Development</a></li>
+                        <li><a href="#services">Integrated Accounting System (IAS)</a></li>
+                        <li><a href="#services">Financial & Trading Systems</a></li>
+                        <li><a href="#services">Client/Server Applications</a></li>
+                        <li><a href="#services">Enterprise Application Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=redhatsysdevelop@gmail.com&su=Inquiry%20from%20HAT%20Website&body=Hello%20HAT%20Software%2C%0A%0AI%20would%20like%20to%20ask%20about..."
+                                target="_blank" rel="noopener">redhatsysdevelop@gmail.com</a></li>
+                        <li>444-7391</li>
+                        <li>Brgy. Cabug, Bacolod City, Negros Occidental 6100, Philippines</li>
+                        <li><a href="https://www.facebook.com/hatsoftwaredeveloper" target="_blank"
+                                rel="noopener">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copy">&copy; <span id="year">2026</span> HAT Software Development Services. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========== PROJECT POP-UP (opens from the "View Project" buttons) ========== -->
+    <dialog id="projectModal" class="modal" aria-labelledby="mTitle">
+        <button class="modal-close" id="mClose" aria-label="Close">&times;</button>
+        <p class="modal-kicker" id="mKicker"></p>
+        <h3 id="mTitle"></h3>
+        <p class="modal-sub" id="mSub"></p>
+
+        <!-- Image slider -->
+        <div class="slider" id="mSlider">
+            <div class="slides" id="mSlides"></div>
+            <button class="slide-btn prev" id="mPrev" aria-label="Previous screenshot">&#8249;</button>
+            <button class="slide-btn next" id="mNext" aria-label="Next screenshot">&#8250;</button>
+        </div>
+        <div class="dots" id="mDots"></div>
+        <p class="slide-hint">Swipe or use the arrows to view screenshots</p>
+
+        <hr>
+        <h4 class="modal-label">Overview</h4>
+        <p id="mOverview"></p>
+
+        <hr>
+        <!-- Two columns: key features (left), scope / technologies / status (right).
+             A block is hidden automatically if its data-... value is missing. -->
+        <div class="modal-cols" id="mCols">
+            <div id="mFeaturesBox">
+                <h4 class="modal-label">Key Features</h4>
+                <ul class="modal-list" id="mFeatures"></ul>
+            </div>
+            <div>
+                <div id="mScopeBox">
+                    <h4 class="modal-label">Scope</h4>
+                    <p class="modal-text" id="mScope"></p>
+                </div>
+                <div id="mTechBox">
+                    <h4 class="modal-label">Technologies</h4>
+                    <div class="tags" id="mTags"></div>
+                </div>
+                <div id="mStatusBox">
+                    <h4 class="modal-label">Status</h4>
+                    <p class="modal-text" id="mStatus"></p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <button id="top" aria-label="Back to top">&uarr;</button>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
