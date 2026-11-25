@@ -1282,8 +1282,11 @@ footer a:hover {
 }
 
 /* very small phones: show only the logo and "HAT" */
-@media (max-width: 380px) {
+@media (max-width: 320px) {
     .logo span {
         display: none;
     }
+}
+:root {
+    color-scheme: light;
 }
